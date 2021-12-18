@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Remove Task</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div>
+            <form action="/">
+                <input type="submit" value="Go Home" />
+            </form>
+        </div>
+        <div>
+            <h1>Remove Task</h1>
+            Please enter task number to be removed
+            <form method="POST">
+                <input type="number" name="text">
+                <input type="submit">
+            </form>
+        </div>
+        <div>
+            {{ return_text }}
+        </div>>
+    </body>
+</html>

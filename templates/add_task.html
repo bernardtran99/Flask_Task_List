@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Task</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div>
+            <form action="/">
+                <input type="submit" value="Go Home" />
+            </form>
+        </div>
+        <div>
+            <h1>Add Task</h1>
+            <form method="POST">
+                <input name="text">
+                <input type="submit">
+            </form>
+        </div>
+        <div>
+            {{ return_text }}
+        </div>>
+    </body>
+</html>

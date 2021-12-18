@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask Task</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="title-class">
+            <h1>Flask Task List</h1>
+        </div>
+        <div>
+            <form action="add-task">
+                <input type="submit" value="Add Tasks" />
+            </form>
+        </div>
+        <div>
+            <form action="remove-task">
+                <input type="submit" value="Remove Tasks" />
+            </form>
+        </div>
+        <div class="task-div">
+            <table class="task-table">
+                <tr>
+                    <th>Number</th>
+                    <th>Tasks</th>
+                </tr>
+                {% for j, k in task_dict.items() %}
+                <tr>
+                    <td>{{ j }}</td>
+                    <td>{{ k }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
